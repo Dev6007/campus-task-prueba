@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { Tarea } from './tarea.model';
 import { TareasService } from './tareas.service';
 
@@ -6,6 +6,7 @@ import { TareasService } from './tareas.service';
   selector: 'app-tareas',
   standalone: true,
   templateUrl: './tareas.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './tareas.component.css',
 })
 export class TareasComponent implements OnInit {
