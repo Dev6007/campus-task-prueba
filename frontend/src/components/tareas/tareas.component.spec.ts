@@ -60,8 +60,6 @@ describe('TareasComponent', () => {
     ]);
   });
 
-  // --- PRUEBAS NUEVAS DEL TALLER ---
-
   it('edita una tarea tras pulsar Editar, cambiar el texto y pulsar Guardar', () => {
     // 1. Preparar el espía para que devuelva la tarea actualizada
     tareasService.actualizar.and.returnValue(of({ id: 1, titulo: 'Título actualizado' }));
