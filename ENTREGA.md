@@ -4,9 +4,9 @@
 
 - Jose Manuel Castaño Rojas - 2459522
 
-Fecha: Pendiente
+Fecha: 5 de Octubre, 2026
 
-Rama: Pendiente
+Rama: taller/actualizar-eliminar-tareas/gabrielbr-josemanuel
 
 # //Puesta en marcha:
 ## (Las capturas de pantalla se encuentran en la carpeta "evidencias-trabajo")
@@ -184,6 +184,23 @@ DELETE: (Sin tarea)
 
 Al ejecutar npm test en el **frontend**, la terminal confirmo que todo estuviera en orden al mostrar cuatro de cuatro procesos ejecutados sin ningun inconveniente ``(Executed 4 of 4 SUCCESS)`` para posteriormente visualizar el apartado de Karma con sus cuatro specs evaluados.
 
+Adicionalmente, las pruebas del servicio HTTP mediante el Karma una vez inicializado el **frontend** permite confirmar que los botones agregados a la interfaz funcionan como deberian en donde al agregar una tarea nueva se actualiza la lista, si deseamos eliminarla el id de esta tarea se llama mediante el **spy** y la lista se actualiza nuevamente. Finalmente, para editar una tarea existente el boton de guardar cambios trae el id una vez mas gracias al **spy** con el titulo nuevo y la interfaz actualizada con los cambios que hemos realizado.
+
 # Comandos Git:
 
-Pendiente
+Los comandos git utilizados para la realizacion de los commits en actualizaciones anteriores se realizaron mediante el Github Desktop para mayor comodidad asi como el ``pull origin master`` para traer los cambios de Master a la rama ``GBR`` en donde se trabajo todo el Taller antes de migrar a ``taller/actualizar-eliminar-tareas/gabrielbr-josemanuel``, traducidos a comandos en terminal se verian tal que asi:
+
+```
+git checkout -b taller/actualizar-eliminar-tareas/gabrielbr-josemanuel
+
+git status
+
+git add ENTREGA.md evidencias-trabajo
+
+git commit -m "Entrega y evidencias de trabajo"
+```
+
+El ``git status`` se realizo para verificar que el .env no se involucrara e igualmente que sea ignorado por el **.gitignore** de la raiz.
+
+Link de la rama: Pendiente
+
