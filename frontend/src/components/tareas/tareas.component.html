@@ -9,13 +9,36 @@
     <input type="text" #tituloInput />
     <button (click)="crear(tituloInput.value)">Agregar</button>
   </div>
+
   <ul>
     @for (tarea of tareas(); track tarea.id) {
+      <li>
+        @if (tareaEnEdicionId() !== tarea.id) {
+          <span class="numero">{{ tarea.id }}</span>
+          <span class="titulo">{{ tarea.titulo }}</span>
 
-    <li>
-      <span class="numero">{{ tarea.id }}</span>
-      <span class="titulo">{{ tarea.titulo }}</span>
-    </li>
+          <button (click)="iniciarEdicion(tarea.id)">
+            Editar
+          </button>
+
+          <button (click)="eliminar(tarea.id)">
+            Eliminar
+          </button>
+
+        } @else {
+          <span class="numero">{{ tarea.id }}</span>
+
+          <input
+            type="text"
+            #editInput
+            [value]="tarea.titulo"
+          />
+
+          <button (click)="guardar(tarea.id, editInput.value)">
+            Guardar
+          </button>
+        }
+      </li>
     }
   </ul>
 </section>

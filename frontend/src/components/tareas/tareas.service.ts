@@ -14,4 +14,14 @@ export class TareasService {
   crear(titulo: string): Observable<Tarea> {
     return this.http.post<Tarea>(`${this.apiUrl}/tareas`, { titulo });
   }
+  actualizar(id: number, titulo: string): Observable<Tarea> {
+    // Llama a PATCH /tareas/:id enviando el nuevo título en el cuerpo
+    return this.http.patch<Tarea>(`${this.apiUrl}/tareas/${id}`, { titulo });
+  }
+
+  eliminar(id: number): Observable<void> {
+    // Llama a DELETE /tareas/:id
+    return this.http.delete<void>(`${this.apiUrl}/tareas/${id}`);
+  }
 }
+
